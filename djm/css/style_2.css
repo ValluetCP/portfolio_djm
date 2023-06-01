@@ -1,0 +1,23 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+/* Sections */
+
+section{
+    height: 50vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Articles */
+article{
+    background-color: plum;
+    width: 320px;
+    height: 120px;
+    padding: 1em;
+}

@@ -1,0 +1,2351 @@
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}img,video{width:100%;vertical-align:middle;}
+
+
+
+h1{
+    font-family: ivymode, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+    font-size: 72px;
+    margin-bottom: 65px;
+    text-transform: uppercase;
+    
+}
+
+h2{
+    text-transform: uppercase;
+    font-family: montserrat;
+    font-weight: 500;
+    font-style: normal;
+    color: #D3B986;
+    font-size: 13px;
+    letter-spacing: 3px;
+    line-height: 30px;
+    margin-bottom: 60px;
+    /* margin-bottom: 52px; */
+}
+
+.text_h2{
+    margin-left: 25px;
+}
+
+h3{
+    font-family: ivymode, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #0D0D0D;
+    font-size: 45px;
+    margin-bottom: 78px;
+    text-transform: uppercase;
+}
+
+h4{
+    font-family: montserrat, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #CAA573;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 30px;
+    margin-top: 50px;
+}
+
+p{
+    font-family: montserrat;
+    font-weight: 300;
+    font-style: normal;
+    color: #201F1C;
+    font-size: 16px;
+    letter-spacing: 2.5px;
+    line-height: 30px;
+}
+
+.gras_txt{
+    font-weight: 500;
+}
+
+/* menu cliquable des chapitres */
+ul>a{
+    text-decoration: none;
+    font-family: ivymode, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    font-style: normal;
+    letter-spacing: 1px;
+    line-height: 35px;
+    color: #FFFFFF;
+}
+ul>a:hover{
+    color: #D5BC89;
+}
+
+/* Test cv */
+main{
+    background-image: url(./img/bg.jpg);
+    padding: 80px 0 38px;
+}
+.cv{
+    max-width: 860px;
+    margin: auto;
+    margin-bottom: 54px;
+    padding: 20px;
+}
+/* .bouton_telechargement{
+    margin: auto;
+    max-width: 302px;
+} */
+.cta_erreur>.btn_cv{
+    background: #B59D6D;
+}
+
+/* Flèche vers le haut */
+.btn_f{
+   height: 60px; 
+   width: 60px;
+   background: #06050a86;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: fixed;
+   left: 190px;
+   bottom: 32px;
+   cursor: pointer;
+}
+
+.icone{
+    width: 50%;
+}
+ /* Menu - NAV */
+
+ .logo>a{
+     text-decoration: none;
+     color: white;
+     font-family: montserrat;
+     font-weight: 300;
+     font-size: 18px;
+     letter-spacing: 2px;
+     text-transform: uppercase;
+ }
+ .logo>a>span{
+     font-weight: 500;
+
+ }
+
+ nav{
+    position: fixed;
+    background-color: #06050a86;
+    display: flex;
+    height: 72px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 195px;
+    width: 100%;
+    z-index: 8;
+    top: 0;
+}
+
+.trigger{
+    display: none;
+}
+
+
+.burger > div {
+width: 36px;
+height: 4px;
+background: white;
+margin-bottom: 7px;
+transition: all 0.5s ease-in;
+}
+
+
+.burger > div:nth-child(3) {
+margin-bottom: 0;
+}
+
+.burger,
+.trigger {
+cursor: pointer;
+position: fixed;
+top: 28px;
+right: 50px;
+display: block;
+margin: 0;
+z-index: 11;
+}
+/* Le trigger est un input qu'on a placé devant le burger qui sera cliqué quand l'user clique sur le burger: il a la meme taille */
+.trigger {
+z-index: 12;
+width: 36px;
+height: 26px;
+opacity: 0;
+}
+/* Animation du burger */
+
+.trigger:checked + .burger > div:nth-child(1) {
+/* background-color: aqua; */
+/* déplacer au milieu et tourner pour se mettre en diagonale: */
+transform: translateY(11px) rotate(-45deg);
+}
+.trigger:checked + .burger > div:nth-child(2) {
+/* background-color: chocolate; */
+/* réduire l'échelle horizontale jusqu'a disparaitre */
+transform: scale(0.2, 0);
+opacity: 0;
+}
+.trigger:checked + .burger > div:nth-child(3) {
+/* background-color: #46C; */
+/* monter et pivoter */
+transform: translateY(-11px) rotate(+45deg);
+}
+.trigger:checked ~ .menu_nav{
+    transform: translate(0);
+}
+/* NAVIGATION */
+.menu_nav {
+position: fixed;
+top: 0;
+right: 0;
+left: 0;
+bottom: 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+transform: translate(-100%);
+transition: all 0.5s ease-in-out;
+background-color: white;
+/* display: none;  */
+/* n'affecte plus la nav */
+}
+
+
+/*///////////////////////////////// PERSONALISATION - MENU */
+
+.grid_menu{
+    display: flex;
+    margin: auto;
+    width: 100%;
+    flex-direction: row
+    
+}
+/* .grid_menu{
+    display: grid;
+    min-width: 100vw;
+    grid-template: 100vh /1fr 1fr;
+    
+} */
+
+.menu_dore{
+    background-color: #D3B986;
+    padding-top: 190px;
+    width: 100%;
+    
+}
+.menu_fond{
+    background-image: url(./img/bg.jpg);
+    width: 100%;
+}
+
+.menu_dore>p{
+    font-family: montserrat;
+    font-weight: 500;
+    font-style: normal;
+    color: black;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 30px;
+    max-width: 567px;
+    margin: auto;
+}
+
+.text_menu_deroulant{
+    margin-top: 70px;
+}
+.text_menu_deroulant>div>a{
+    font-family: ivymode, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #0D0D0D;
+    font-size: 50px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 3px;  
+}
+.text_menu_deroulant>div>a:hover{
+    color: white;
+}
+.mp>a>div:hover{
+    color: white;
+}
+.m3>a>p:hover{
+    color: black;
+}
+
+.text_menu_deroulant>div{
+    max-width: 567px;
+    margin: auto;
+}
+
+.menu_fond>div{
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    transform: translateY(418%);
+}
+.menu_fond>div>p{
+    max-width: 595px;
+    margin: auto;
+    color: white;
+    /* align-content: center; */
+    
+}
+
+.menu_fond>div>p:nth-child(1){
+    font-family: montserrat, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #D3B986;
+    font-size: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 38px;
+}
+.menu_fond>div>p:nth-child(2){
+    font-family: ivymode, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #DBDBDB;
+    font-size: 76px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+/* .menu_fond>div>p:nth-child(1){
+    font-family: ivymode, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: white;
+    font-size: 103px;
+    text-align: center;
+}
+.menu_fond>div>p:nth-child(2){
+    font-family: montserrat, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #D3B986;
+    font-size: 26px;
+    text-align: center;
+} */
+
+.m1{
+    display: flex;
+    justify-content: space-between;
+    margin: 45px 0;
+}
+.m1>div:nth-child(2){
+    font-size: 26px;
+    padding-top: 10px;
+}
+.m2{
+    color: #0D0D0D;
+    margin-bottom: 10px;
+}
+.mp>a>p{
+    font-family: montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #0D0D0D;
+}
+.m3{
+    margin-top: 30px;
+    padding-left: 75px;
+}
+.m3>a{
+    text-decoration: none;
+}
+.m3>a>p{
+    font-family: ivymode, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.m3>a>p{
+    padding: 0px 0;
+}
+
+/* MENU - HOVER - ANIMATION */
+
+/* /////////////////////  MENU - MAX-WIDTH : 1400px /////////////////////////*/
+
+@media(max-width: 1400px){
+
+    /*MENU - FOND DOREE */
+    .m1>div{
+        font-size: 35px; 
+    }
+    .mp>a>p{
+        font-size: 11px; 
+    }
+    .menu_dore {
+        padding-top: 150px;
+    }
+    .menu_dore>p {
+        max-width: 490px;
+    } 
+
+    .menu_fond>div>p:nth-child(1) {
+        font-size: 19px;
+    }
+    .menu_fond>div>p:nth-child(2) {
+        font-size: 60px;
+    }
+    .text_menu_deroulant>div {
+        max-width: 490px;
+    }
+
+    /*MENU - FOND DECOR */
+    .menu_fond>div {
+        transform: translateY(375%);
+    }
+    
+}
+/* /////////////////////  MENU - MAX-WIDTH : 1080px /////////////////////////*/
+
+    /*MENU - FOND DOREE - 1080px*/
+@media(max-width: 1080px){
+    .grid_menu {
+        display: block;
+    }
+    .menu_dore {
+        padding-top: 120px;
+        padding-bottom: 90px;
+    }
+
+    /*MENU - FOND DECOR - 1080px*/
+    .menu_fond {
+        height: 100%;
+        padding: 50px 0 50px;
+    }
+    .menu_fond > div {
+        transform: translateY(0%);
+    }
+    .menu_fond>div>p:nth-child(1) {
+        font-size: 19px;
+    }
+    .menu_fond>div>p:nth-child(2) {
+        font-size: 60px;
+    }
+}
+
+/* /////////////////////  MENU - MAX-WIDTH : 560px /////////////////////////*/
+
+@media(max-width: 560px){
+
+    /*MENU - FOND Doree- 560px*/
+    .text_menu_deroulant {
+        margin-top: 32px;
+    }
+    .text_menu_deroulant {
+        padding: 0 25px;
+    }
+    .m1>div {
+        font-size: 32px;
+    }
+    .m1>div:nth-child(2) {
+        font-size: 24px;
+    }
+    .menu_dore>p {
+        padding: 0 25px;
+    }
+    .m3 {
+        padding-left: 0px;
+    }
+    .mp>a>p>span {
+        display: none;
+    }
+
+     /*MENU - FOND DECOR - 560px*/
+    .menu_fond>div>p:nth-child(1) {
+        font-size: 12px;
+    }
+    .menu_fond>div>p:nth-child(2) {
+        font-size: 22px;
+    }
+    .menu_dore {
+        padding-bottom: 56px;
+    }
+}
+
+                /*  Démarche créative - 1. INTRODUCTION*/
+
+.ch_1{
+    background-color: #06050A;
+    padding-top: 128px;
+}
+
+.ch_1>div,
+.ch_3>div{
+    display: flex;
+    margin: auto;
+    max-width: 1148px;
+}
+
+.ch_singe_menu{
+    padding-top: 225px;
+    /* padding-left: 50px; */
+    margin-right: 25px;
+}
+
+.theme_dc{
+    margin-top: 80px;
+    padding-bottom: 50px;
+    padding-left: 85px;
+    color: #9F9F9F;
+    font-family: ivymode, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.theme_ug{
+    margin-top: 152px;
+}
+
+.ch_singe_menu>ul{
+    padding-left: 50px;
+}
+
+
+            /* <!-- Univers Graphique - 3. création de contenu -->  */
+
+.ch_3{
+    background-color: #000000;
+    padding-top: 188px;
+}
+
+.ch_requin_menu{
+    padding-top: 120px;
+    margin: 0 25px;
+}
+
+.theme_ug{
+    margin-top: 182px;
+}
+            /*  Démarche créative - 1. INTRODUCTION - LA DEMANDE */
+
+.ch1_demande{
+    background-color: #F9F9F7;
+    
+}
+
+.ch1_demande>div{
+    display: flex;
+    max-width: 1148px;
+    margin: auto;
+    justify-content: space-between;
+    /* width: calc((100% - 150px)); */
+}
+
+.legende{
+    display: flex;
+    margin-top: 140px;
+    justify-content: space-between;
+}
+
+.legende>div>p{
+    color: #D3B986;
+    font-weight: 300;
+    font-size: 11px;
+    text-transform: uppercase;
+    line-height: 20px;
+}
+
+.legende>div>p>span{
+    font-weight: 400;
+    font-size: 12px;
+    color: #0D0D0D;
+}
+
+.demande_texte{
+    max-width: 540px;
+    padding-top: 100px;
+    margin: 0 25px;
+}
+
+.col_image_1{
+    margin-right: 25px;
+}
+
+
+            /* Démarche créative - 1. INTRODUCTION - PRESENTATION PROJET */
+
+.ch1_pres{
+    display: flex;
+    max-width: 1148px;
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+
+.col_texte{
+    max-width: 540px;
+    margin: 0 25px;
+}
+
+.singe{
+    margin-top: 50px;
+}
+.col_image_2{
+    margin: 0 25px;
+}
+
+            /* Démarche créative - 1. INTRODUCTION - PROBLEMATIQUE, BENCHMARK */
+ 
+
+.col_texte_bench{
+    padding-top: 55px;
+    margin: 0 25px;
+}
+            
+.ch1_bench{
+    background-color: #000000;
+}
+
+.ch1_bench>div{
+    display: flex;
+    max-width: 1148px;
+    margin: auto;
+    /* margin-top: 150px; */
+    padding-top: 160px;
+    padding-bottom: 200px;
+    justify-content: space-between;
+}
+
+.benchmark{
+    color: white;
+}
+.bench>li{
+    font-family: montserrat;
+    font-weight: 300;
+    font-style: normal;
+    color: #D5C6A9;
+    font-size: 15px;
+    letter-spacing: 3px;
+    line-height: 35px;
+    text-transform: uppercase;
+}
+
+            /* Démarche créative - 1. INTRODUCTION - dossier PDF */
+
+.ch1_annexe{
+    background-color: #D3B986;
+    padding: 65px 0px;
+    
+}
+
+.ch1_annexe>div>h2{
+    color: #0D0D0D;
+    margin-left: 25px;
+}
+.ch1_annexe>div{
+    max-width: 1148px;
+    margin: auto; 
+}
+
+.dossiers{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 62px;
+}
+
+.dossiers>div{
+    margin: 0 25px;
+}
+
+.dossiers>div>a{
+    display: flex;
+    /* justify-content: space-between;
+    max-width: 480px;  */
+    border-bottom: 0.2px solid #6A6A6A; 
+    padding-bottom: 10px;
+    width: 450px;
+    justify-content: space-between;
+    text-decoration: none;
+}
+.col_dossier>div>p:hover{
+    color: #444444;
+}
+
+.col_dossier{
+    display: flex; 
+}
+
+.col_dossier>div>p{
+    color: #FFFFFF;
+    font-family: ivymode, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    line-height: 40px;
+}
+
+.pdf{
+    font-family: montserrat;
+    font-weight: 500;
+    font-style: normal;
+    color: #0D0D0D;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.slash{
+    padding-right: 10px;
+}
+
+            /* Démarche créative - 2. ANALYSE */
+.ch_2{
+    background-color: #000000;
+    padding-top: 228px;
+    padding-bottom: 200px;
+}
+
+.ch_2>div{
+    display: flex;
+    max-width: 1148px;
+    margin: auto;
+    
+}
+.ch_scarabe{
+    margin-left: 25px;
+}
+.ch_scarabe_menu{
+    padding-top: 70px;
+    padding-left: 80px;
+}
+
+            /* Démarche créative - 2. ANALYSE - PERSONA */
+
+
+.persona{
+    margin: auto;
+    max-width: 1148px;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+.persona>h2{
+    margin-left: 25px;
+}
+
+.persona>h2>span{
+    color: #747474;
+}
+
+.trait_h4{
+    border-bottom: solid 1px #CAA573;
+    max-width: 50px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+}
+
+.persona>div{
+    display: flex;
+    justify-content: space-between;
+}
+.persona>div>div{
+    margin: 0 25px;
+}
+
+.persona_1>li{
+    font-family: montserrat;
+    font-weight: 500;
+    font-style: normal;
+    color: #CAA573;
+    font-size: 16px;
+    /* text-transform: uppercase; */
+    letter-spacing: 1px;
+    line-height: 30px;  
+} 
+
+.persona_1>li>span{
+    font-weight: 400;
+
+}
+
+.persona_2>li{
+    font-family: montserrat;
+    font-weight: 400;
+    font-style: normal;
+    color: #0D0D0D;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 30px; 
+}
+
+.caractere{
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+            /* Démarche créative - 2. ANALYSE - ARBORESCENCE */
+
+
+.arbo{
+    background-color: #D5BC89;
+    padding-top: 80px;
+    padding-bottom: 150px;
+    
+}
+
+
+.arbo>div{
+    max-width: 1148px;
+    margin: auto;
+}
+
+.arbo>div>h2{
+    color: #0D0D0D;
+    margin-left: 25px;
+}
+
+            /* Démarche créative - 2. ANALYSE - WIREFRAME */
+
+
+.wireframe{
+    background-color: #FBFBFB;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+.wireframe>div{
+    max-width: 1148px;
+    margin: auto;
+}
+.wireframe>div>h2{
+    margin-left: 25px;
+}
+
+.img_wireframe{
+    display: flex;
+    justify-content: space-between;
+}
+.img_wireframe>div>p{
+    margin-left: 25px;
+}
+.hp_fp{
+    margin-top: 20px;
+}
+
+
+
+            /* transition - poursuivre vers UNIVERS GRAPHIQUE */
+
+.sect_trans{
+    background-image: url(./img/bg_footer.jpg);
+    padding: 234px 0 28px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.transition{
+    max-width: 1148px;
+    margin: auto;
+    margin-bottom: 210px;
+}
+.transition>a{
+    text-decoration: none;
+}
+.transition>a>p{
+    text-transform: uppercase;
+    padding: 0 50px;
+}
+.transition>a>p:nth-child(1){
+    color: #D5BC89;
+    padding-bottom: 25px;
+}
+.transition>a>p:nth-child(2){
+    color: white;
+    font-family: ivymode, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 58px;
+    letter-spacing: 1.5px;
+    line-height: 40px;
+    padding-bottom: 50px;
+}
+.transition>a>p>span{
+    color: #D5BC89;
+    padding: 0 10px;
+}
+.transition_ug>a>p{
+    text-align: end;
+}
+.transition>a>p:hover{
+    color: #B9B9B9;
+}
+
+.info{
+    /* display: flex; */
+    margin: auto;
+    max-width: 1148px;
+
+}
+.info>a{
+    padding: 15px;
+    margin: 0 20px;
+    color: #D5BC89;
+    text-transform: uppercase;
+    font-size: 16px;
+    text-decoration: none;
+}
+.info>a:hover{
+    color: #B9B9B9;
+}
+                /* <!-- FOOTER --> */
+footer{
+    background-color: #0D0D0D;
+}
+.footer{
+    max-width: 364px;
+    margin: auto;
+    padding: 40px 0;
+}
+
+.footer>p{
+    font-family: montserrat;
+    font-weight: 300;
+    font-style: normal;
+    color: white;
+    font-size: 14px;
+    /* text-transform: uppercase; */
+    letter-spacing: 1px;
+    line-height: 30px; 
+    text-align: center;
+}
+
+                    /* //////////UNIVERS GRAPHIQUE//////////// */
+
+
+                /* Univers Graphique - charte graphique */
+
+.couleur{
+    width: 100%;
+}
+.lot_couleur{
+    display: flex;
+    width: 100%;
+}
+.charte{
+    background-color: #F8F8F8;
+    padding: 80px 0 150px;
+}
+.charte>div{
+    max-width: 1148px;
+    margin: auto;
+}
+
+.charte>div>h2{
+    margin-left: 25px;
+}
+/* noir */
+.rond_ext{
+    border: 1px solid black;
+    width: 136px;
+    height: 136px;
+    display: flex;
+    border-radius: 50%;
+    margin: auto;
+} 
+
+.rond_int{ 
+    width: 106px;
+    height: 106px;
+    background: black;
+    border-radius: 50%;
+    margin: auto;
+}
+
+/* gris foncé */
+.rond_ext_gf{
+    border: 1px solid #444444;  
+}
+
+.rond_int_gf{
+    background: #444444;
+}
+
+/* gris clair */
+.rond_ext_gc{
+    border: 1px solid #C6C6C6;  
+}
+
+.rond_int_gc{
+    background: #C6C6C6;
+}
+
+/* dorée */
+.rond_ext_dore{
+    border: 1px solid #D3B986;  
+}
+
+.rond_int_dore{
+    background: #D3B986;
+}
+.charte_couleur {
+    display: flex;
+    padding-top: 50px;
+    justify-content: space-between;
+    margin: 0 25px;
+}
+
+.trait_charte{
+    border-bottom: black 1px solid;
+    margin-bottom: 40px;
+}
+
+.couleur>div:nth-child(2)>p{
+    font-family: montserrat;
+    font-weight: 600;
+    font-style: normal;
+    color: #201F1C;
+    font-size: 22px;
+    text-transform: uppercase;
+    /* letter-spacing: 0.2px; */
+    line-height: 30px;
+    padding: 60px 0 20px;
+    padding-left: 55px;
+}
+
+.hex>p{
+    font-family: montserrat;
+    font-weight: 600;
+    font-style: normal;
+    color: #201F1C;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    line-height: 30px;
+    padding-left: 50px;
+}
+
+.hex>p>span{
+    font-weight: 300;
+    padding-left: 10px;
+}
+
+                    /* Univers Graphique - Typographie */
+
+.grid{
+    display: flex;
+    margin: auto;
+    width: 100%;
+    height: 910px;
+}
+.rect_blc{
+    background-color: #EFEFEF;
+    padding-top: 182px;
+    width: 100%;
+    
+}
+.rect_dore{
+    background-color: #D3B986;
+    padding-top: 182px;
+    width: 100%;
+}
+
+
+.rect_blc>div,
+.rect_dore>div{
+    margin-left: 100px;
+    margin-right: 25px;
+}
+/* .rect_blc>div{
+    margin-left: 242px;
+} */
+
+    /* Univers Graphique - Typographie -rectangle blc */
+
+
+.rect_blc>div>p:nth-child(3n+1){
+    font-family: montserrat;
+    font-weight: 300;
+    font-style: normal;
+    color: #B59D6D;
+    font-size: 15px;
+}
+.rect_blc>div>p:nth-child(2){
+    font-family: butler;
+    font-weight: 400;
+    font-style: normal;
+    color: #000000;
+    font-size: 100px;
+    padding: 28px 0;
+}
+
+.rect_blc>div>p:nth-child(3){
+    font-family: montserrat;
+    font-weight: 400;
+    font-style: normal;
+    color: #505050;
+    font-size: 16px;
+    letter-spacing: 0.2px;
+}
+
+.rect_blc>div>p:nth-child(4){
+    margin-top: 108px;
+    padding-bottom: 28px;
+}
+
+.rect_blc>div>p:nth-child(5){
+    font-family: butler;
+    font-weight: 400;
+    font-style: normal;
+    color: #000000;
+    font-size: 26px;
+}
+
+.rect_blc>div>p:nth-child(6){
+    font-family: montserrat;
+    font-weight: 500;
+    font-style: normal;
+    color: #747474;
+    font-size: 30px;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    margin-top: 150px;
+}
+
+
+
+    /* Univers Graphique - Typographie -rectangle Dorée */
+
+
+.rect_dore>div>p:nth-child(3n+1){
+    font-family: montserrat;
+    font-weight: 300;
+    font-style: normal;
+    color: white;
+    font-size: 15px;
+}
+.rect_dore>div>p:nth-child(2){
+    font-family: montserrat;
+    font-weight: 400;
+    font-style: normal;
+    color: #000000;
+    font-size: 90px;
+    letter-spacing: 0.2px;
+    padding: 28px 0;
+}
+
+.rect_dore>div>p:nth-child(3){
+    font-family: montserrat;
+    font-weight: 400;
+    font-style: normal;
+    color: #505050;
+    font-size: 16px;
+    letter-spacing: 0.2px;
+}
+
+.rect_dore>div>p:nth-child(4){
+    margin-top: 108px;
+    padding-bottom: 28px;
+}
+
+.rect_dore>div>p:nth-child(5){
+    font-family: butler;
+    font-weight: 400;
+    font-style: normal;
+    color: #000000;
+    font-size: 26px;
+    padding-bottom: 150px;
+}
+
+.rect_dore>div>p:nth-child(6){
+    font-family: montserrat;
+    font-weight: 500;
+    font-style: normal;
+    color: #747474;
+    font-size: 30px;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    margin-top: 102px;
+    line-height: 52px;
+}
+
+
+.police{
+    display: grid;
+    max-width: 250px;
+    grid-template-rows: 70px;
+    grid-template-columns: 125px 125px;
+}
+
+.police_2>li{
+    padding-bottom: 18px;
+    font-family: montserrat;
+    font-style: normal;
+    color: #0D0D0D;
+    font-size: 23px; 
+}
+
+.police_2>li:nth-child(1){
+    font-weight: 300;  
+}
+.police_2>li:nth-child(2){
+    font-weight: 400;  
+}
+.police_2>li:nth-child(3){
+    font-weight: 500;  
+}
+.police_3>li:nth-child(1){
+    font-weight: 600;  
+}
+.police_3>li:nth-child(2){
+    font-weight: 700;  
+}
+
+            /* Univers Graphique - Création 2D 3D */
+
+
+.col_txt_2{
+    padding-left: 45px;
+}
+.image_virt{
+    margin-bottom: 108px;
+}
+
+
+            /* Univers Graphique - Logiciel */
+
+
+.annexe_2{
+    background-color: #F8F8F8;
+    display: flex;
+}
+.annexe_2>div{
+    background-color: #F8F8F8;
+    display: flex;
+    max-width: 1148px;
+    /* justify-content: space-between; */
+    margin: auto;
+    padding: 54px 0;
+}
+
+.logiciel{
+    display: flex;
+    width: 430px;
+    justify-content: space-between;
+    border-bottom: #707070 solid 1px;
+    padding-bottom: 20px;
+}
+
+.col_annexe{
+    padding: 0 50px;
+}
+
+.logiciel>p{
+    color: #000000;
+    font-family: ivymode, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;
+    letter-spacing: 1px;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+
+.logiciel_li>li{
+    font-family: montserrat;
+    font-weight: 600;
+    font-style: normal;
+    color: #201F1C;
+    font-size: 12px; 
+    text-transform: uppercase;
+    line-height: 26px;
+    letter-spacing: 1px;
+}
+
+.logiciel_li>li>span{
+    font-family: montserrat;
+    font-weight: 300;
+    font-style: normal;
+    color: #201F1C;
+    font-size: 12px; 
+    text-transform: uppercase;
+    
+}
+
+.logiciel_li{
+    padding-top: 35px;
+}
+
+
+                    /* Univers Graphique - Iconographie */
+
+.icono{
+    max-width: 1148px;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+.icono>div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.col_icono>p{
+    text-align: center;
+}
+
+.icono_montre{
+    font-family: butler;
+    font-weight: 400;
+    font-style: normal;
+    color: #000000;
+    font-size: 30px;
+    letter-spacing: 0px;
+    padding-top: 50px; 
+}
+
+.icono_creation{
+    color: #B2B2B2;
+    font-size: 18px; 
+    letter-spacing: 0px;
+    padding-top: 15px;
+}
+
+.col_icono{
+    padding: 0 20px;
+}
+
+                    /* Univers Graphique - 4. Réalisation */
+
+.ch_savanah_menu {
+    padding-top: 180px;
+    padding-left: 0px;
+    margin: 0 20px;
+}
+
+.ch_savanah{
+    margin: 0 20px;
+}
+
+                        /* Univers Graphique - Responsive */
+
+.resp{
+    
+    background-image: url(./img/bg.jpg);
+    padding: 100px 0 160px 0;
+}
+
+.resp>div{
+    max-width: 1148px;
+    margin: auto;
+}
+
+.resp_mob{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 14px;
+}
+/* .resp>div>h2{
+    margin-left: 25px;
+} */
+
+                        /* Univers Graphique - Site Web */
+
+
+.site_texte{
+    font-family: montserrat;
+    font-weight: 300;
+    font-style: normal;
+    color: #201F1C;
+    font-size: 16px;
+    letter-spacing: 3px;
+    line-height: 30px;
+    padding-top: 30px;
+    margin-bottom: 120px;
+}
+
+.bouton{
+    margin-top: 50px;
+    padding: 15px 15px;
+    background-color: #000000;
+    max-width: 340px;
+}
+
+.bouton>a{
+    text-decoration: none;
+    font-family: montserrat;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 3px;
+    line-height: 30px;
+    text-transform: uppercase;
+    justify-content: center;
+}
+
+.site_img{
+    padding-top: 120px;
+}
+
+.ch4_site{
+    padding-bottom: 100px;
+}
+
+.web_text{
+    max-width: 540px;
+}
+
+/* .web_text>div{
+    width: 542px;
+} */
+.web_text>div:nth-child(1){
+    margin: 0 25px;
+}
+
+/*  Univers Graphique  -  Bouton btn_4 - lien site web */
+
+.btn_4{
+    background: black;
+    border: 0.5px solid white;
+    color: white;
+    cursor: pointer;
+    padding: 10px 40px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    /* margin-top: 60px; */
+
+}
+
+.btn_acc{
+    border: 0.5px solid #B59D6D;  
+}
+.btn_profil{
+    border: 0.5px solid black;
+    font-weight: 400;  
+}
+
+.btn_som_2{
+    background: white;
+    color: black;
+}
+
+.btn_profil{
+    background-color:white;
+    color: black;
+}
+
+
+.btn_4::before{
+    content: '';
+    position: absolute;
+    background-color: #D5BC89;
+    height: 105%;
+    top: 50%;
+    left: 50%;
+    width: 0%;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.3s;
+    transform: translate(-50%,-50%);
+
+}
+
+.btn_acc::before{
+    background-color: white;
+}
+.btn_profil::before{
+    background-color: #D5BC89;
+}
+
+.btn_som_2::before{
+    background-color: black;
+}
+
+
+.btn_4:hover{
+    color: black;
+    z-index: 1;
+    font-weight: 400;
+}
+
+.btn_som_2:hover{
+    color: white;
+}
+
+.btn_4:hover::before{
+    opacity: 1;
+    width: 80%;
+
+}
+
+.btn_4:active::before{
+    width: 105%;
+}
+
+.btn_som_2,
+.btn_som_1{
+    width: 480px;
+    height: 50px;
+    /* margin-top: 60px; */
+}
+
+.bouton_dispo{
+    padding: 0 64px;
+}
+
+.bouton_telechargement{
+    margin: auto;
+    max-width: 302px;
+}
+
+/* padding: 15px 15px;
+    background-color: #000000;
+    max-width: 340px;
+    margin: auto; */
+
+.cta_erreur{
+    height: 50px;
+}
+
+.cta_som_1{
+    margin-bottom: 40px;
+}
+/* .cta_som_2{
+    margin-bottom: 100px;
+} */
+
+.sommaire>li{
+    color: #0D0D0D;
+    font-family: ivymode, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    letter-spacing: 1px;
+    line-height: 95px;
+    text-transform: uppercase;
+}
+
+.sommaire>li:nth-child(3){
+    color: white;
+}
+
+
+
+
+            /*  ////// PAGE ACCUEIL - SCROLL HORIZONTAL /////*/
+
+/* EXERCICE TEST DJM  */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.slide {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
+
+
+.blocHorizontal {
+    display: flex;
+    flex-direction: row;
+    width: 400vw;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+}
+.container {
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-x: hidden;
+
+    /* pour ie et mozilla */
+    -ms-overlow-style: none;
+    scrollbar-width: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.one {
+    background-image: url(./img/accueil_fond.jpg);
+}
+.two {
+    background : linear-gradient(to bottom, white 356px, black 356px);
+}
+.three {
+    background: #D5BC89;
+    padding-bottom: 84px;
+}
+.four {
+    background: white;
+}
+
+/* MODIF EXO */
+
+.slide_one>h1{
+    font-family: ivymode, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+    font-size: 142px;
+    margin: 30px 0;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 155px;
+    letter-spacing: 3px;
+}
+
+
+.slide_one>p{
+    font-family: montserrat;
+    font-weight: 300;
+    font-style: normal;
+    color: white;
+    font-size: 26px;
+    letter-spacing: 5px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.accueil_h2{
+    text-transform: uppercase;
+    font-family: montserrat;
+    font-weight: 500;
+    font-style: normal;
+    color: #000000;
+    font-size: 13px;
+    letter-spacing: 3px;
+    line-height: 30px;
+    /* margin-bottom: 60px; */
+}
+
+/* .slide_tree{
+
+} */
+
+                    /* ////// PAGE ACCUEIL- A PROPOS ///////// */
+
+.slide3{
+    width: 20%;
+}
+.accueil_a_propos{
+    max-width: 1145px;
+}
+
+.accueil_a_propos>p{
+    font-family: ivymode, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    font-size: 37px;
+    /* margin: 30px 0; */
+    text-align: center;
+    letter-spacing: 3px;
+    line-height: 60px;
+    padding-bottom: 75px;
+    margin-top: 170px;
+}
+
+.accueil_a_propos>p>span{
+    color: #FFFFFF;
+}
+
+.bouton_cv{
+    padding: 15px 15px;
+    background-color: #000000;
+    max-width: 340px;
+    margin: auto;
+}
+
+.bouton_cv>a{
+    text-decoration: none;
+    font-family: montserrat;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 3px;
+    line-height: 30px;
+    text-transform: uppercase;
+    justify-content: center;
+    text-align: center;
+}
+
+/* /// PAGE ACCUEIL - TITRE SOMMAIRE - SLIDE 2 /// */
+
+.slide2{
+    width: 8%;
+}
+
+.container_duo{
+    max-width: 420px;
+    margin: auto;
+    margin-top: 80px;
+}
+.container_duo>div:nth-child(1){
+    padding: 0 34px;
+}
+
+
+.container_duo>p{
+    color: white;
+    font-family: montserrat, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 11.5px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    text-transform: uppercase;
+    padding: 0 34px;
+}
+
+/* .bouton{
+    padding-left: 34px;
+} */
+
+h5{
+    font-size: 16px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500; 
+    line-height: 30px;
+    margin: 70px 34px 50px;
+}
+h5>span{
+    font-size: 16px;
+    color: #D5BC89;
+    text-transform: uppercase;
+    font-weight: 500; 
+    margin-top: 100px; 
+    line-height: 30px;
+    font-style: italic;
+}
+/* /// PAGE ACCUEIL - TITRE SOMMAIRE - SLIDE 4 /// */
+
+
+.slide4{
+    width: 80vw;
+}
+
+.m_singe{
+    padding: 60px;
+}
+
+.four>div>h2{
+    /* margin-bottom: 100px; */
+    margin-bottom: 112px;
+}
+.four>div>h3{
+    font-size: 94px;
+    margin-bottom: 26px;
+}
+.four>div>p{
+    font-size: 21px;
+    color: #0D0D0D;
+    text-transform: uppercase;
+    margin-bottom: 64px;
+    font-weight: 400;
+}
+
+.site_texte>li{
+    color: #B59D6D;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 36px;
+    font-weight: 400;
+}
+
+
+
+.slide_four{
+    padding: 0 80px;
+}
+
+            /* /// PAGE ACCUEIL - SOMMAIRE PROJET - SLIDE 5 /// */
+
+.slide5{
+    width: 50vw;
+    padding-bottom: 80px;
+}
+
+.som_lien{
+    margin-bottom: 22px;
+    
+}
+
+.som_chiffre{
+    font-size: 26px;
+}
+
+.som_test{
+    display: flex;
+    /* justify-content: center; */
+}
+.som_test>div{
+    color: #0D0D0D;
+    font-family: ivymode, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    letter-spacing: 1px;
+    line-height: 95px;
+    text-transform: uppercase;
+}
+.som_test>div:nth-child(2) {
+    font-size: 27px;
+    padding-left: 20px;
+}
+
+.som_h2{
+    padding-bottom: 48px;
+}
+
+.txt_blc>div{
+    color: white;
+}
+
+                    /* //// ANNEXEPage CV ////  */
+
+.duo_cv{
+    width: 100vw;
+    height: 100vh;
+    background : linear-gradient(to bottom, white 428px, black 428px);
+    /* background : black; */
+}
+
+.fond_cv{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./img/bg.jpg);
+
+}
+.fond_cv>div{
+    max-width: 1284px;
+    margin: auto;
+    padding: 100px;
+
+}
+
+/* @media(max-width: 1650px){
+    
+}
+
+@media(max-width: 1200px){
+
+} */
+/* @media(max-width: 700px){
+    
+} */
+/* /////////////////////////////////////////////////////////////////////////// */
+
+@media(max-width: 1080px){
+
+    /* Démarche créative - 1. INTRODUCTION - max-width: 1080px */
+    .ch_1 {
+        padding-top: 35px;
+    }
+    .ch_1>div, .ch_3>div {
+        display: block;
+        margin: auto;
+        max-width: 595px;
+    }
+    .ch_singe_menu {
+        padding-top: 50px;
+        /* padding-left: 50px; */
+        margin-right: 25px;
+    }
+    .theme_dc {
+        margin-top: 115px;
+    }
+
+
+    /* Démarche créative - 1. INTRODUCTION - LA DEMANDE - max-width: 1080px */
+    .ch1_demande {
+        padding-bottom: 50px;
+    }
+    .ch1_demande>div {
+        display: block;
+        max-width: 595px;
+    }
+    .col_image_1 {
+        display: none;
+    }
+
+    /* Démarche créative - 1. INTRODUCTION - PRESENTATION - max-width: 1080px */
+    .ch1_pres {
+        display: block;
+        max-width: 595px;
+        margin-top: 18px;
+    }
+    .col_montre_singe{
+        padding: 50px;
+        margin: 18px 25px; 
+    }
+
+    /* Démarche créative - 1. INTRODUCTION - PROBLEMATIQUE, BENCHMARK - 1080px*/
+    .ch1_bench>div {
+        display: block;
+        max-width: 595px;
+        padding-top: 40px;
+        padding-bottom: 110px;
+    }
+    .col_montre_jd{
+        padding: 0px;
+        margin-top: 100px;
+    }
+
+    /* Démarche créative - 1. INTRODUCTION - dossier PDF - 1080px */
+    .dossiers {
+        display: block;
+    }
+    .dossiers>div>a{
+        margin-bottom: 28px;
+        width: 500px;
+    }
+    .ch1_annexe>div {
+        max-width: 595px;
+    }
+
+    /* Démarche créative - 2. ANALYSE - 1080px */
+    .ch_2>div {
+        display: block;
+        max-width: 595px;
+    }
+    .ch_2 {
+        padding-top: 126px;
+        padding-bottom: 122px;
+    }
+
+    /* Démarche créative - 2. ANALYSE - PERSONA - 1080px */
+    .persona {
+        max-width: 595px;
+    }
+    .persona>div {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    /* Démarche créative - 2. ANALYSE - WIREFRAME - 1080px */
+    .wireframe {
+        background-color: #141414;
+    }
+    .img_wireframe>div>p {
+        color: white;
+    }
+
+    /* //////////////////////////Univers Graphique - 1080px////////////////// */
+
+    /* Univers Graphique - 3. création de contenu - 1080px */
+    .ch_3 {
+        padding-top: 112px;
+    }
+
+    /* Univers Graphique - charte graphique couleur - 1080px */
+    .lot_couleur {
+        margin-bottom: 100px;
+    }
+    .charte_couleur {
+        display: block;
+        max-width: 595px;
+        margin: auto;
+    }
+    .charte {
+        padding-bottom: 8px;
+    }
+    .charte>div>h2 {
+        max-width: 595px;
+    }
+    
+    /* Univers Graphique - Typographie - 1080px  */
+    .grid {
+        display: block;
+        height: 665px;
+    }
+    .rect_blc,
+    .rect_dore {
+        padding: 75px 0;
+    }
+    .rect_blc>div>p:nth-child(1n+4),
+    .rect_dore>div>p:nth-child(1n+4) {
+        display: none;
+    }
+    .police{
+        display: none;
+    }
+    .rect_blc>div>p:nth-child(3n+1) {
+        padding-bottom: 5px;
+    }
+    .rect_blc>div>p:nth-child(2) {
+        padding: 38px 0;
+    }
+
+    /* Univers Graphique - Logiciel - 1080px */
+    .annexe_2>div {
+        display: block;
+        max-width: 595px;
+        padding-bottom: 10px;
+    }
+    .col_annexe {
+        margin-bottom: 60px;
+    }
+
+    /* Univers Graphique - Iconographie - 1080px */
+    .icono>div {
+        display: block;
+    }
+    .col_icono {
+        padding: 50px 90px;
+    }
+    .icono {
+        max-width: 595px;
+    }
+
+    /* Univers Graphique - Maquette graphique - 1080px */
+    .wireframe>div {
+        max-width: 595px;
+    }
+
+    /* Univers Graphique - Responsive - 1080px */
+    .resp>div {
+        max-width: 595px;
+    }
+    .resp_mob {
+        display: block;
+    }
+    .resp_mob>div {
+        margin-bottom: 20px;
+        padding: 0 98px 50px;
+    }
+    .resp {
+        padding: 100px 0 70px 0;
+    }
+
+    /* Univers Graphique & Déamrche Créative - Responsive - 1080px */
+    .transition>a>p:nth-child(2) {
+        font-size: 52px;
+    }
+}
+
+/* ///////////////////////  MAX-WIDTH : 690 px  ///////////////////////////// */
+
+@media(max-width: 690px){
+    h1{
+        font-size: 34px;
+    }
+    h2{
+        line-height: 27px;
+    }
+    .titre_sup{
+        display: none;
+    }
+    h3{
+        font-size: 44px;
+    }
+
+    /* Menu - 690px */
+    nav {
+        padding: 0 26px;
+    }
+    
+    /* Démarche créative - 1. INTRODUCTION - 690px */
+    .ch_singe_menu {
+        margin: auto;
+        max-width: 286px;
+    }
+    .theme_dc {
+        padding-left: 36px;
+    }
+
+    /* Démarche créative - 1. INTRODUCTION - LA DEMANDE - 690px */
+    .demande_texte {
+        /* max-width: 420px; */
+        padding-top: 48px;
+        margin: auto;
+        margin: 0 25px;
+    }
+
+    /* Démarche créative - 1. INTRODUCTION - PRESENTATION PROJET - 690px */
+    .legende {
+        display: block;
+        margin-top: 54px;
+    }
+    .legende>div {    
+        margin-bottom: 20px;
+    }
+    .col_montre_singe {
+        padding: 50px;
+    }
+
+    /* Démarche créative - 1. INTRODUCTION - PROBLEMATIQUE, BENCHMARK - 690px */
+    .bench>li {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+    .col_texte_bench {
+        padding-top: 23px;
+    }
+
+    /* Démarche créative - 1. INTRODUCTION - dossier PDF - 690px */
+    .dossiers>div>a {
+        width: 310px;
+    }
+    .ch1_annexe>div {
+        max-width: 310px;
+        margin: auto;
+    }
+    .dossiers>div {
+    margin: 0;
+    }
+    .col_dossier>div>p {
+        font-size: 14px;
+    }
+
+    /* Démarche créative - 2. ANALYSE - 690px */
+    .ch_scarabe_menu {
+        padding-left: 44px;
+    }
+
+    /* Démarche créative - 2. ANALYSE - ARBORESCENCE - 690px */
+    .arbo {
+        padding-bottom: 82px;
+    }
+
+    /* Démarche créative - 2. ANALYSE - WIREFRAME  - 690px */
+    .img_wireframe {
+        display: block;
+    }
+    .img_wireframe>div {
+        margin-bottom: 64px;
+    }
+    .col_image_2 {
+        margin: 0 45px;
+    }
+
+    /* ////////////////////////////Univers Graphique - 690px///////////////// */
+
+
+    .rond_ext {
+        width: 84px;
+        height: 84px;
+    }
+    .rond_int {
+        width: 65px;
+        height: 65px;
+    }
+    .couleur>div:nth-child(2)>p {
+        /* padding-left: 0px;
+        padding-bottom: 40px; */
+        padding: 46px 0 24px;
+        font-size: 18px;
+        text-align: center;
+    }
+    .hex>p {
+        padding-left: 27px;
+        font-size: 13px;
+    }
+    .lot_couleur {
+        max-width: 326px;
+        margin: auto;
+        margin-bottom: 85px;
+    }
+    .charte_couleur {
+        padding-top: 16px;
+    }
+
+    /* Univers Graphique - Typographie - 690px */
+    .rect_blc>div, 
+    .rect_dore>div {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin: auto;
+        max-width: 326px;
+    }
+    .rect_dore>div>p:nth-child(2) {
+        font-size: 60px;
+    }
+
+    /* Univers Graphique - Création 2D 3D - 690px */
+    .col_2d {
+        padding-left: 0px;
+    }
+    .col_annexe {
+        padding: 0;
+    }
+    .image_virt {
+        margin-left: 5px;
+    }
+
+    /* Univers Graphique - Logiciel - 690px */
+    .logiciel {
+        width: 375px;
+    }
+    .logiciel_li>li {
+        font-size: 11px;
+        letter-spacing: 0px;
+    }
+    .logiciel_li>li>span {
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+
+    /* Univers Graphique - Iconographie - 690px */
+    .col_icono {
+        padding: 0 78px 85px;
+    }
+    .icono_montre {
+        padding-top: 30px;
+    }
+    .icono {
+        padding-top: 68px;
+        padding-bottom: 10px;
+    }
+
+    /* Univers Graphique - Réalisation - 690px */
+    .ch_savanah_menu{
+        padding-left: 0px;
+    }
+
+    /* Univers Graphique - Maquette graphique - 690px */
+    .wireframe {
+        padding-bottom: 60px;
+    }
+    
+    /* Univers Graphique - Responsive - 690px */
+    .resp_mob>div {
+        padding: 0 83px 60px;
+    }
+    
+    .resp {
+        padding: 68px 0 40px;
+    }
+    .resp_mob>div {
+        margin-bottom: 0px;
+        padding: 0 41px 60px;
+    }
+
+    /* Univers Graphique - Site Web - 690px */
+
+
+    /* .web_text>div {
+        width: 326px;
+    } */
+    .site_texte {
+        margin-bottom: 60px;
+    }
+    .site_img {
+        padding-top: 75px;
+    }
+    .web_text>div {
+        max-width: 440px;
+        margin: auto;
+    }
+
+    /* Flèche vers le haut */
+    .btn_f{
+        left: 6%;
+        bottom: 2%;
+        height: 50px;
+        width: 50px;
+    }
+
+    /* transition - poursuivre vers Démarche Créative - 690px */
+    .footer>p {
+        font-size: 11px;
+        line-height: 28px;
+    }
+    .info>a {
+        padding: 10px;
+        font-size: 14px;
+    }
+    /* transition - poursuivre vers UNIVERS GRAPHIQUE  - 690px */
+    .transition>a>p:nth-child(2) {
+        font-size: 24px;
+        padding-bottom: 0px;
+    }
+    .transition>a>p {
+        padding: 0 12px;
+    }
+    .sect_trans {
+        padding-top: 80px;
+    }
+    .transition {
+        margin-bottom: 96px;
+    }
+}
+
+ /* //////////////////////////// MAX-WIDTH - 412px///////////////// */
+  /* /////////////////////Démarche créative - 412px */
+
+ @media(max-width: 412px){
+
+    /* Démarche créative - Présentation - 412px */
+    .col_montre_singe {
+        padding: 8px;
+    }
+
+    /* Démarche créative - Benchmark - 412px */
+    .bench>li {
+        font-size: 11px;
+    }
+
+    /* /////////////////////Univers Graphique - 412px */
+
+    /* Univers Graphique - Charte graphique - 412px */
+    .charte {
+        padding-top: 50px;
+    }
+
+    /* Univers Graphique - Iconographie - 412px */
+    .col_icono {
+        padding: 0 51px 85px;
+    }
+
+    /* Univers Graphique - Logiciels - 412px */
+    .logiciel {
+        width: 308px;
+    }
+    /* Univers Graphique - Maquette graphique - 412px */
+    .wireframe {
+        padding-top: 50px;
+    }
+
+    /* Univers Graphique - Responsive - 412px */
+    .resp {
+        padding-top: 50px;
+    }
+
+    /* Univers Graphique - Site Web - 412px */
+     .site_img{
+         margin: 0 25px;
+     }
+
+ }
+

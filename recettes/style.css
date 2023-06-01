@@ -1,0 +1,1527 @@
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}img,video{width:100%;vertical-align:middle;}
+html{
+
+/* ZONE - Paramétrage - règle valable pour l'ensemble de la page */
+
+    /* font-family: 'Raleway', sans-serif;  s'il est copié de google font/ coller ici et plus besoin de re coller ailleurs car c'est cascade, ça se répercute sur tout à par si la police diffère.*/
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: black;
+}
+
+h1{
+    font-weight: 700;
+    font-size: 42px;
+    letter-spacing: 8px;
+    line-height: 62px;
+    color: black;
+    padding: 30px;
+}
+h2{
+    font-size: 28px;
+    font-weight: 700;
+    color:#BFA870;
+    text-align: center;
+    padding-top: 120px;
+}
+h3{
+    font-size: 24px;
+    font-weight: 700;
+    color: #000000;
+}
+h4{
+    font-weight: 600;
+    color: #BFA870;
+    font-size: 20px;
+}
+h5{
+    font-weight: 600;
+    font-size: 16px;
+}
+.h6{
+    font-weight: 700;
+    margin-bottom: 35px;
+    color:  #BFA870;
+    padding-left: 30px;
+    font-size: 14px;
+
+}
+.sous_titre{
+    max-width: 526px;
+    margin: auto;
+    text-align: center;
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 30px;
+    padding-top:20px ;
+    margin-bottom: 100px;
+}
+/* ZONE - Header - Logo et menu de navigation */
+
+.topbar{
+    background: #ffffff;
+    position: fixed;
+    /* fixed, veut dire qu'on le sort du flux, donc il n'a plus de parent */
+    top: 0;
+    width: 100%;
+    height: 69px;
+    z-index: 5;
+
+}
+/* header>a>img  (mode de recherche)*/
+.logo_cuisine{
+    width: 171.72px;
+    /* ne rentrer que la largeur du logo , la hauteur reste en auto. Elle se calcule automatiquement */
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+}
+.nav_pc{
+    display: flex;
+    /* ça devient une flex box */
+    justify-content: center;
+    align-items: center;
+    /* aligner verticalement */
+    height: 100%;
+}
+.nav_pc>a{
+    text-decoration: none;
+    color: black;
+    margin-right: 30px;
+    font-weight: 700;
+    transform: translateY(200%);
+}
+.menu_nav{
+    z-index: 3;
+}
+.menu_burger{
+    display: none;
+}
+.nav_tab {
+    display: none;
+}
+
+.trigger {
+    display: none;
+}
+
+/* ZONE - Header -  encadré blanc */
+
+.carre_blanc_header{
+    background-color: #ffffffda;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 19px;
+    padding: 40px;
+    width: 531px;
+    height: 386px;
+    margin-top: 100px;
+    margin-left: 50px;
+    /* taille du carré blanc */
+}
+
+/* ZONE - Header -  visuel principal */
+.essai{
+    position: relative;
+}
+.encadre_principal{
+    z-index: 2;
+    margin-top: 69px;
+}
+.carre_blanc_header>p{
+    line-height: 27px;
+    padding: 5px 20px 0 20px;
+}
+
+/* .en_savoir_plus {
+text-align: center;
+padding-top: 30px;
+padding-left: 40px;
+
+} */
+.en_savoir_plus>a{
+    text-decoration: none;
+    /* padding-right: 40px;
+    text-align: right; */
+    color: #292929;
+    /* padding-left: 70px; */
+    
+}
+.en_savoir_plus {
+    text-align: center;
+    /* text-align: left; */
+    /* padding-top: 0px; */
+}
+/* .en_savoir_plus {
+    text-align: center;
+    margin: auto;
+    padding-left: 70px;
+    } */
+/* .img_header{
+    height: 807px;
+} */
+/* .img_header{
+    background: url(./img/Header_image_entete_de_page_entiere.jpg);
+    height: 807px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* width: 100%; */
+    /* background-position: center;
+}*/
+
+/* ZONE - Section 1 - Brunch */
+
+.Section_1>h2{
+padding-top: 90px;
+}
+.Section_1>p{
+    max-width: 526px;
+    margin: auto;
+    text-align: center;
+}
+.Section_1>div{
+    display: flex;
+    max-width: 1230px;
+    margin: auto;
+    /* width: calc(100% * 1 / 2 -); */
+    margin-top: 120px;
+}
+.Section_1>div>img{
+    width: calc(100% * 1030 / 1230);
+    /* width: calc(50% - (10px / 2)); */
+
+}
+.brunch>h3{
+    padding: 130px 0 0 110px;
+    line-height: 30px;
+    letter-spacing: 5px;
+}
+.brunch>p{
+    padding: 42px 110px 50px 110px;
+    /* margin-bottom: 80px; */
+    line-height: 28px;
+}
+.brunch>a{
+    padding-left: 104px;
+    text-decoration: none;
+    font-weight: 300;
+    color: #292929;
+    /* padding-bottom: 80px; */
+}
+.brunch{
+    padding-bottom: 80px ;
+    border: 0.2px  solid #dddddd;
+    width: calc(100% * 5 / 12);
+}
+.brunch_img{
+    background: url(img/section1_img1_BrunchGauffreFruit_2.jpg) left bottom;
+    background-size: cover;
+    width: calc(100% * 7 / 12);
+}
+.brunch_img>img{
+    display: none;
+}
+
+
+/* ZONE - Section 2 - VOS COUP DE COEUR */
+.Section_2>div{
+    display: flex;
+    max-width: 1228px;
+    margin: auto;
+}
+.Section_2>div>figure{
+    position: relative;
+    width: calc((100% * 1 / 3) - (44px / 3));
+}
+.Section_2>div>figure:nth-child(2){
+    margin: 0 22px;
+}
+
+.Section_2>div>figure>a>figcaption{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffffcb;
+    font-size: 20px;
+    padding: 25px 15px 25px 15px;
+    max-width: 395px;
+    line-height: 24px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: black;
+
+}
+
+/* ZONE - Section 3- CETTE SEMAINE */
+.Section_3>div{
+    display: flex;
+    max-width: 1228px;
+    margin: auto;
+}
+.cette_semaine>figure{
+    width: calc((100% * 1 / 3) - (44px / 3));
+}
+.cette_semaine>figure:nth-child(2){
+    margin: 0 22px;
+}
+.cette_semaine>figure>a>figcaption{
+    font-weight: 700;
+    text-align: center;
+    font-size: 17px;
+    padding: 20px 40px 0 40px;
+    margin-bottom: 160px;
+    line-height: 22px;
+    letter-spacing: 2px;
+}
+.Section_3>div>figure>a {
+    color: black;
+    text-decoration: none;
+}
+
+/* ZONE - Section 4- SUIVEZ LA RECETTE */
+
+.Section_4>div{
+    display: flex;
+    max-width: 1228px;
+    margin: auto;
+    /* width: calc(100% * 1 / 3 - total des marges horizontales ); */
+}
+.Section_4{
+    background-color: #CCD6CA;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+.Section_4>div>img{
+    width: calc(50% - (10px / 2));
+    margin-right: 22px;
+}
+.Section_4>div>div>p{
+    font-size: 14px;
+    padding: 42px 100px 0 104px;
+    margin-bottom: 50px;
+    line-height: 28px;
+}
+.Section_4>div>div>a{
+    padding-left: 104px;
+    text-decoration: none;
+    font-weight: 300;
+    margin-bottom: 30px;
+    color: #292929;
+}
+.Section_4>div>div{
+    background-color: #ffffff;
+    width: calc(50% - (10px / 2));
+    padding-left: 50px;
+    
+}
+.Section_4>div>div>h2{
+    padding-top: 110px;
+    text-align: left;
+    padding-left: 104px;
+}
+
+/* Footer */
+.footer{
+    background-color: #ffffff;
+    padding: 50px 0 63px 0;
+    text-align: center;
+}
+
+.fleche{
+    margin: auto;
+    max-width: 54px;
+    margin-bottom: 50px;
+}
+.reseau{
+    display: flex;
+    margin: auto;
+    max-width: 257px;
+    margin-bottom: 50px;
+    
+}
+.pinterest,
+.facebook, 
+.instagram,
+.youtube{
+    margin-left: 14px;
+    margin-right: 14px;
+}
+.section_ingredients{
+    display: inline-flex;
+    text-align: left;
+}
+.menu_footer{
+    /* display: flex; */
+    max-width: 680px;
+    /* margin: auto; */
+
+}
+.menu_footer>div>ul{
+    color: #7a7979;
+    font-size: 12px;
+    height: 130px;
+    padding-left: 30px;
+}
+.menu_footer_2>div>ul{
+    color: #7a7979;
+    font-size: 12px;
+    height: 130px;
+    padding-left: 30px;
+}
+
+.menu_footer>div>ul>a{
+    text-decoration: none;
+    color: #7a7979;  
+}
+.menu_footer_2>div>ul>a{
+    text-decoration: none;
+    color: #7a7979;
+}
+
+/* .menu_footer>div>ul>li{
+    padding: 20px;
+} */
+/* .menu_footer{
+    display: flex;
+} */
+.ingredient,.index{
+    display: flex;
+    line-height: 17px;
+}
+
+.lettres{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 50px;
+ 
+}
+
+.menu_footer>h6,
+.menu_footer_2>h6{
+    font-weight: 700;
+    margin-bottom: 35px;
+    color:  #BFA870;
+    padding-left: 30px;
+    font-size: 14px;
+}
+.p1>a>p{
+    max-width: 755px;
+    margin: auto;
+    text-align: center;
+    color: #7a7979;
+    line-height: 28px;
+    margin-top: 50px;
+}
+.p2>a>p{
+    max-width: 1107px;
+    margin: auto;
+    text-align: center;
+    color: #7a7979;
+    line-height: 28px;
+    margin-bottom: 50px ;
+}
+
+.p1>a{
+    text-decoration: none;
+}
+
+.p2>a{
+    text-decoration: none;
+}
+
+                        /* DEUXIEME PAGE - CUISINE THAI */
+
+
+        /* SECTION 1 - SOUPE THAI - IMAGE*/
+
+
+.thai_section_1{
+    display: flex;
+    max-width: 1230px;
+    margin: auto;
+    margin-top: 135px;
+}
+/* .Section_1>div>img{
+    width: calc(100% * 1030 / 1230);
+} */
+
+.soupe_img>img{
+    width: calc(100% * 1030 / 1230);
+}
+/* .thai_section_1>div>img{
+    width: calc(100% * 1030 / 1230);
+} */
+
+
+.soupe_thai>h3 {
+    padding: 130px 0 110px 90px;
+    line-height: 34px;
+    letter-spacing: 4px;
+    font-size: 28px;
+}
+/* .brunch>h3{
+    padding: 130px 0 0 110px;
+    line-height: 30px;
+    letter-spacing: 5px;
+} */
+/* .brunch>p{
+    padding: 42px 110px 50px 110px;
+    line-height: 28px;
+} */
+.soupe_thai>a{
+    padding-left: 90px;
+    text-decoration: none;
+    font-weight: 300;
+    color: #292929;
+}
+.soupe_thai{
+    padding-bottom: 80px ;
+    border: 0.2px  solid #dddddd;
+    width: calc(100% * 5 / 12);
+}
+.soupe_img{
+    background: url(./img/soupe_thai.jpg) left bottom;
+    background-size: cover;
+    width: calc(100% * 7 / 12);
+}
+/* .brunch_img{
+    background: url(img/section1_img1_BrunchGauffreFruit_2.jpg) left bottom;
+    background-size: cover;
+    width: calc(100% * 7 / 12);
+} */
+.soupe_img>img{
+    display: none;
+}
+/* .etoiles {
+    color: #E25D0A;
+    font-size: 20px;
+} */
+.avis{
+    display: flex;
+    padding-left: 90px;
+    /* padding: 0px 20px 0px 90px; */
+}
+.etoiles{
+    padding-right: 20px;
+}
+.avis>a{
+    text-decoration: none;
+    color: #707070;
+
+}
+
+
+/* SECTION 2 - PICTOS PREPARATION */
+
+.n1,
+.n2,
+.n3,
+.n4{
+    display: flex;
+}
+.n1{
+    max-width: 1060px;
+    margin: auto;
+    /* justify-content: center; */
+}
+.n1 {
+    padding: 18px 168px 18px;
+    background-color: #ffffff;
+    border: 1px solid #BFA870;
+}
+.n4>div>img {
+    margin-right: 10px;
+    width: 40px;
+    margin-left: 50px;
+}
+.n4>p{
+    /* padding-top: 10px; */
+    padding: 10px;
+}
+.thai_section_2{
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+/* SECTION 3 - INGREDIENTS (2 personnes) - ET - MATERIEL */
+
+.section_thai_3{
+    margin: auto;
+    display: flex;
+    max-width: 1060px;
+    /* padding-left: 124px; */
+    padding: 0px 124px 0px;
+    justify-content: space-between;
+}
+/* .ingr_1{
+    padding-right: 360px;
+} */
+.section_thai_3>div>h4{
+    padding-bottom: 45px;
+}
+.section_thai_3>div>ul>li{
+    padding-bottom: 10px;
+    font-size: 16px;
+}
+
+/* SECTION 4 - PREPARATION */
+
+.thai_section_4{
+    max-width: 1060px;
+    margin: auto;
+    background-color: #ffffff;
+    border: 1px solid #BFA870;
+    padding: 45px 275px 46px 124px; 
+    margin-top: 75px;
+}
+
+.thai_section_4>h4{
+    margin-bottom: 35px;
+}
+.thai_section_4>h5{
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+.thai_section_4>p{
+    font-size: 16px;
+    line-height: 25px;
+}
+
+/* SECTION 5 - CONSEIL */
+
+.txt_conseil{
+    max-width: 1230px;
+    margin: auto;
+    background-color: #F2F2F2;
+    position: relative;
+    padding: 60px 319px 42px 85px;
+}
+.image_conseil{
+    position: absolute;
+}
+.txt_conseil>p{
+    font-size: 18 px;
+    padding-left: 124px;
+}
+.txt_conseil>h4{
+    padding: 0px 0px  20px 124px;
+}
+.image_conseil>img{
+    transform: translate(50% 50%);   
+}
+
+/* SECTION 6 - EN PANNE D'INSPIRATION */
+
+.thai_section_6>div{
+    display: flex;
+    max-width: 1228px;
+    margin: auto;
+}
+.thai_section_6>div>figure{
+    position: relative;
+    width: calc((100% * 1 / 3) - (44px / 3));
+}
+.thai_section_6>div>figure:nth-child(2){
+    margin: 0 22px;
+}
+
+.thai_section_6>div>figure>a>figcaption{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffffcb;
+    font-size: 20px;
+    padding: 25px 15px 25px 15px;
+    max-width: 395px;
+    line-height: 24px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: black;
+
+}
+.thai_section_6>p {
+    font-weight: 300;
+}
+/* FOOTER */
+.menu_footer>h6,
+.menu_footer_2>h6{
+    font-weight: 700;
+    margin-bottom: 35px;
+    color:  #BFA870;
+    padding-left: 30px;
+    font-size: 14px;
+}
+
+
+@media (max-width: 1024px) {
+    
+    
+    .burger,.trigger {
+        position: fixed;
+        top: 24px;
+        left: 24px;
+        display: block;
+        margin: 0;
+        z-index: 6;
+    }
+    .burger>div {
+        width: 36px;
+        height: 4px;
+        background: #BFA870;
+        margin-bottom: 5px;
+        border-radius: 0px;
+        transition: all 0.5s ease-in;
+    }
+    .trigger{
+        z-index: 7;
+        width: 36px;
+        height: 28px;
+        opacity: 0;
+    }
+
+        /* Animation du burger */
+    
+        .trigger:checked+.burger>div:nth-child(1){
+            /* background-color: violet; */
+            /* Descente puis pivoter */
+            transform: translateY(9px) rotate(-45deg);
+        }
+        .trigger:checked+.burger>div:nth-child(2){
+            /* background-color: yellow; */
+            /* Réduire l'échelle horizontale jusqu'à disparaitre */
+            transform: scale(0.2, 0);
+            opacity: 0;
+        }
+        .trigger:checked+.burger>div:nth-child(3){
+            /* background-color: pink; */
+            transform: translateY(-9px) rotate(45deg);
+        /* Monter puis pivoter */
+        }
+
+        .nav_tab {
+            background-color: white;
+            
+        }
+
+        /* .nav_tab>a{
+            padding: 20px 0;
+            text-decoration: none;
+            color: #8E8D8D;
+            text-align: center;
+        } */
+        .nav_tab>a {
+            padding: 20px 0;
+            text-decoration: none;
+            color: #8E8D8D;
+            text-align: center;
+            font-size: 18px;
+        }
+        .nav_tab>a:nth-child(1) {
+            /* padding: 20px 0; */
+            border-right: 0;
+            border-left: 0;
+            font-size: 30px;
+            padding-bottom: 85px;
+            padding-top: 0px;
+            color: black;
+    
+        }
+        .nav_tab>a>span {
+            color: #BFA870;
+        }
+
+        .nav_tab {
+            position: fixed;
+            top: 79px;
+            right: 10px;
+            left: 10px;
+            bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transform: translate(-105%);
+            transition: all 1s ease-in-out;            
+        }
+        .trigger:checked~.topbar>nav>div:nth-child(3){
+            transform: none;
+        }
+
+        .nav_border {
+            width: 100%;
+            position: fixed;
+            top: 69px;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-color: white;
+            opacity: 80%;
+            transform: translate(-100%);
+            transition: all 1s ease-in-out;            
+        }
+
+        .trigger:checked~.topbar>nav>div:nth-child(2){
+            transform: none;
+        }
+
+
+
+
+
+
+
+
+
+    .nav_pc {
+        display: none;
+    }
+    
+    /* LA NAV */
+    /* header>a>img  (mode de recherche)*/
+    .logo_cuisine{
+        margin: auto;   
+    }
+    .logo_cuisine{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .menu_burger{
+        display: block;
+        width: 35px;
+        position: absolute;
+        top: 50%;
+        transform: translate(50%,-50%);
+    }
+     
+    /* SECTION HEADER - RIEN DE PLUS SIMPLE  */
+    
+    /* .carre_blanc_header{
+        left: 50%;
+        transform: translate(-50%);
+        margin-left: 0px;
+    }
+    .encadre_principal>img{
+        width: 100%;
+    } */
+
+    /* TEST - SECTION HEADER */
+
+    .carre_blanc_header{
+        /* left: 50%; */
+        transform: none;
+        /* transform: translate(0%); */
+        /* margin-left: 0px; */
+        margin-top: 0px;
+        padding: 0px;
+        height: auto;
+    }
+    /* .encadre_principal>img{
+        height: 280px;
+    } */
+    /* ZONE - Header -  encadré blanc */
+
+    .carre_blanc_header>h1{
+        padding: 0px;
+        font-size: 42px;
+        line-height: 55px;
+        letter-spacing: 9px;
+        margin-top: 30px;
+        margin-bottom: 20px;  
+    }
+
+    .carre_blanc_header{
+        background-color: #ffffff00;
+        text-align: center;
+        position: static;
+        width: 100%;
+        margin: 0px;
+        /* position: relative; */
+        /* top: 0; */
+        /* left: 19px; */
+        /* padding: 40px; */
+        /* width: 531px; */
+        /* height: 386px; */
+        /* margin: auto; */
+        
+        /* taille du carré blanc */
+    }
+    .carre_blanc_header>p {
+        padding: 5px 20px 0 0px;
+    }
+    
+
+    /* SECTION 1 : BRUNCH */
+
+    .brunch_img{
+        /* background: none; */
+        width: calc(100% * 7 / 12);
+    }
+    /* .brunch_img>img{
+        display: none;
+    } */
+
+    .Section_1>div{
+        display: flex;
+        max-width: 788px;
+        margin: auto;
+        /* width: calc(100% * 1 / 2 -); */
+        margin-top: 120px;
+        
+    }
+    .brunch{
+        height: 372px;
+        padding-bottom: 0px ;
+        border: none;
+        background-color: #f6f6f6;
+    }
+    .brunch>h3{
+        padding: 90px 0 0 50px;
+        line-height: 30px;
+        letter-spacing: 2px;
+    }
+    .brunch>p{
+        padding: 42px 50px 65px 50px;
+        /* margin-bottom: 80px; */
+        line-height: 25px;
+    }
+    .brunch>a{
+        padding-left: 50px;
+        padding-bottom: 65px;
+    }
+
+    /* SECTION 2 - VOS COUP DE COEUR */
+
+    .Section_2>div{
+        display: flex;
+        max-width: 788px;
+        margin: auto;
+    }
+    .Section_2>div>figure{
+        position: relative;
+        width: calc((100% * 1 / 3) - (28px / 3));
+    }
+    .Section_2>div>figure:nth-child(2){
+        margin: 0 14px;
+    }
+    .Section_2>div>figure>a>figcaption{
+        font-size: 16px;
+        padding: 18px 15px 18px 15px;
+    }
+
+    /* SECTION 3 - CETTE SEMAINE */
+
+    .Section_3>div{
+        display: flex;
+        max-width: 788px;
+        margin: auto;
+    }
+    .cette_semaine>figure{
+        width: calc((100% * 1 / 3) - (28px / 3));
+    }
+    .cette_semaine>figure:nth-child(2){
+        margin: 0 14px;
+    }
+    .cette_semaine>figure>a>figcaption{
+        font-weight: 700;
+        text-align: center;
+        font-size: 14px;
+        padding: 20px 0px 0 0px;
+        margin-bottom: 160px;
+        line-height: 22px;
+        letter-spacing: 2px;
+    }
+
+    /*SECTION 4- SUIVEZ LA RECETTE */
+
+    .Section_4>div{
+        max-width: 788px;
+    }
+    .Section_4>div>img{
+        width: 452px;
+        height: 302px;
+        /* width: calc(50% - (10px / 2));  */
+        margin-right: 0px;
+    }
+    .Section_4{
+        background-color: none;
+        /* padding-top: 0px;
+        padding-bottom: 0px; */
+    }
+    .Section_4>div>div{
+        background-color: #ffffff;
+        width: calc(100% - 452px);
+        padding-left: 40px;
+        height: 302px;
+        padding-right: 40px;
+    }
+    .Section_4>div>div>h2{
+        padding-top: 80px;
+        text-align: left;
+        padding-left: 1px;
+        font-size: 21px;
+        color: #000000;
+    }
+    .Section_4>div>div>p{
+        padding: 32px 5px 0 0px;
+        /* padding: 32px 12px 0 0px; */
+        margin-bottom: 40px;
+        line-height: 28px;
+    }
+    .Section_4>div>div>a{
+        padding-left: 1px;
+        text-decoration: none;
+        font-weight: 300;
+        margin-bottom: 30px;
+        color: #292929;
+    }
+
+    /*SECTION - FOOTER */
+    .section_ingredients,
+    .p1,
+    .contact{
+        display: none;
+    }
+    .footer {
+        padding: 50px 0 0px 0;
+    }
+
+
+                      /* DEUXIEME PAGE - RECETTE THAI - (@media 1024px) */
+
+        /* SECTION 1 - SOUPE THAI - IMAGE */
+
+    /* .brunch_img{
+        width: calc(100% * 7 / 12);
+    } */
+    .soupe_img{
+        width: calc(100% * 7 / 12);
+    }
+    
+
+    /* .Section_1>div{
+        display: flex;
+        max-width: 788px;
+        margin: auto;
+        margin-top: 120px;  
+    } */
+    .thai_section_1{
+        display: flex;
+        max-width: 788px;
+        margin: auto;
+        margin-top: 120px;
+        
+    }
+    /* .brunch{
+        height: 372px;
+        padding-bottom: 0px ;
+        border: none;
+        background-color: #f6f6f6;
+    } */
+    .soupe_thai {
+        height: 305px;
+        padding-bottom: 0px;
+        border: none;
+        background-color: #f6f6f6;
+    }
+    .soupe_thai>h3 {
+        padding: 90px 0 50px 50px;
+        line-height: 30px;
+        letter-spacing: 2px;
+        font-size: 20px;
+    }
+    /* .brunch>p{
+        padding: 42px 50px 65px 50px;
+        line-height: 25px;
+    } */
+    .soupe_thai>a{
+        padding-left: 50px;
+        padding-bottom: 65px;
+    }
+
+    .avis{
+        padding-left: 30px;
+    }
+        /* SECTION 2 - PICTOS PREPARATION  */
+
+    .thai_section_2{
+        max-width: 788px;
+        margin: auto;
+        margin-top: 55px;
+        margin-bottom: 100px;
+    }
+    .n1 {
+        padding: 18px 20px 18px;
+    }
+    
+        
+        /* SECTION 3 - INGREDIENTS (2 personnes) - ET - MATERIEL */
+        
+    /* .ingr_1 {
+        padding-right: 10px;
+    } */
+    /* .materiel{
+        padding-left: 124px;
+    } */
+    .section_thai_3 {
+        margin: auto;
+        display: flex;
+        max-width: 1060px;
+        padding: 0px 124px 0px;
+        justify-content: space-between;
+    }
+        /* SECTION 4 - PREPARATION */
+
+    .thai_section_4{
+        max-width: 788px;
+        padding: 45px 87px 46px 82px;
+    }
+
+        /* EN PANNE D'INSPIRATION */
+
+
+    /* .Section_2>div{
+        display: flex;
+        max-width: 788px;
+        margin: auto;
+    } */
+    .thai_section_6>div{
+        display: flex;
+        max-width: 788px;
+        margin: auto;
+    }
+    .thai_section_6>div>figure{
+        position: relative;
+        width: calc((100% * 1 / 3) - (28px / 3));
+    }
+    .thai_section_6>div>figure:nth-child(2){
+        margin: 0 14px;
+    }
+    .thai_section_6>div>figure>a>figcaption{
+        font-size: 16px;
+        padding: 18px 15px 18px 15px;
+    }
+
+    
+
+
+}
+@media (max-width: 778px){
+    /* ou 793px */
+
+
+
+    /* Animation du burger */
+    .nav_tab>a:nth-child(1) {
+        font-size: 24px;
+        padding-bottom: 65px;
+        /* padding: 0px 0px 65px; */
+        padding-top: 0px;
+    }
+
+
+    /* TITRE */
+
+    .Section_1>h2{
+        /* font-size: 28px;
+        font-weight: 700;
+        color:#BFA870;
+        text-align: center; */
+        /* padding-top: 100px; */
+        padding-bottom: 50px;
+        margin-top: 90px;
+        margin-bottom: 50px;
+        /* padding-top: 60px; */
+    }
+
+    /* SECTION HEADER - RIEN DE PLUS SIMPLE  */
+    
+    .carre_blanc_header{
+        /* left: 50%; */
+        transform: none;
+        /* transform: translate(0%); */
+        /* margin-left: 0px; */
+        margin-top: 0px;
+        padding: 0px;
+        height: auto;
+    }
+    /* .encadre_principal>img{
+        height: 280px;
+    } */
+    /* ZONE - Header -  encadré blanc */
+
+    .carre_blanc_header>h1{
+        padding: 0px;
+        font-size: 32px;
+        line-height: 42px;
+        letter-spacing: 5px;
+        margin-top: 30px;
+        margin-bottom: 10px;  
+    }
+
+    .carre_blanc_header{
+        background-color: #ffffff00;
+        text-align: center;
+        position: static;
+        width: 100%;
+        /* position: relative; */
+        /* top: 0; */
+        /* left: 19px; */
+        /* padding: 40px; */
+        /* width: 531px; */
+        /* height: 386px; */
+        /* margin: auto; */
+        
+        /* taille du carré blanc */
+    }
+    /* .en_savoir_plus>a{
+        padding-left: 0px;
+    } */
+    /* .en_savoir_plus {
+        padding-top: none;
+        
+    } */
+   
+            /* SECTION 1 : BRUNCH */
+
+    .Section_1,
+    .Section_2,
+    .Section_3,
+    .Section_4 {
+        margin: 0 9%;
+    }
+    .Section_1>p,
+    .Section_2>p,
+    .Section_3>p{
+        display: none;
+        }
+
+    .Section_1>h2{
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .Section_1>div {
+        margin-top: 40px;
+    }
+
+    .brunch{
+        width: 100%;
+        height: 285px;
+        padding-bottom: 25px ;
+    }
+    .brunch>h3{
+        padding: 30px 0 0 0px;
+        text-align: center;
+    }
+
+    .brunch_img{
+        width: 100%;
+        display: flex;
+    }
+    .brunch_img>img{
+        display: flex;
+    }
+    .Section_1>div{
+        display: block;
+        /* margin-top: 120px; */
+
+    }
+    /* .brunch>a{
+        float : right;
+        padding-right: 50px;
+    } */
+    .brunch>p{
+        padding-bottom: 40px;
+    }
+    /* .brunch{
+        height: 372px;
+        padding-bottom: 50px ;
+        border: none;
+        background-color: #f6f6f6;
+    } */
+
+    /* SECTION 2 : VOS COUP DE COEUR */
+
+    .Section_2>h2{
+        margin-top: 0px;
+        padding: 100px 0px 50px;  
+    }
+    .Section_2>div {
+        flex-wrap: wrap;
+    }
+    .Section_2>div>figure{
+        width: 100%;
+    }
+    .Section_2>div>figure:nth-child(2){
+        margin: 0;
+    }
+    .Section_2>div>figure>a>figcaption{
+        position: relative;
+        background-color: #BFA870;
+        font-size: 20px;
+        /* line-height: 24px; */
+        /* font-weight: 600; */
+        /* text-align: center; */
+        max-width: none;
+        /* padding-top: 30px; */
+        padding-bottom: 30px;
+        /* margin-top: 10px; */
+        margin-bottom: 20px;
+    }
+    .Section_2>div>figure>a{
+        text-decoration: none;
+    }
+    .Section_4{
+        background: none;
+        /* padding-top: 0px;
+        padding-bottom: 0px; */
+    }
+
+    /* ZONE - Section 3- CETTE SEMAINE */
+
+    .cette_semaine{
+            flex-wrap: wrap;
+    }
+    .cette_semaine>figure{
+        width: 100%;
+    }
+    .cette_semaine>figure:nth-child(2){
+        margin: 0;
+    }
+    .cette_semaine>figure>a>figcaption{
+        font-size: 21px;
+        /* padding: 20px 20px 0 20px; */
+        margin-bottom: 54px;
+        font-weight: 600;
+        line-height: 30px;
+        letter-spacing: 1px;  
+    }
+    .Section_3>h2{
+        margin-top: 0px;
+        padding: 100px 0px 50px;
+       
+    }
+
+    /* SECTION 4 : SUIVER LA RECETTE */
+    .Section_4>div>img{
+        width: 100%;
+        height: auto;
+    }
+    .Section_4>div{
+        display: block;
+        width: 100%;
+    }
+    .Section_4>div>div{
+        width: 100%;
+    }
+    .Section_4>div{
+        max-width: none;
+    }
+    .Section_4>div>div>h2 {
+        margin-top: 0px;
+        padding-bottom: 0px;
+        padding-top: 30px;
+    }
+    .Section_4 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+                            /* DEUXIEME PAGE - RECETTE THAI - (@media 778px) */
+
+        /* SECTION 1 - SOUPE THAI - IMAGE */
+
+            /* SECTION 1 : BRUNCH */
+
+    /* .Section_1,
+    .Section_2,
+    .Section_3,
+    .Section_4 {
+        margin: 0 9%;
+    } */
+    .thai_section_1,
+    .thai_section_2,
+    .thai_section_3,
+    .thai_section_4,
+    .thai_section_6{
+        margin: 0 9%;
+    }
+    /* .Section_1>p,
+    .Section_2>p,
+    .Section_3>p{
+        display: none;
+        } */
+    
+
+    /* .brunch{
+        width: 100%;
+        height: 250px;
+        padding-bottom: 25px ;
+    } */
+    .soupe_thai{
+        width: 100%;
+        height: 200px;
+        padding-bottom: 25px ;
+    }
+    .soupe_thai>h3{
+        padding: 30px 0 0 30px;
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
+    .soupe_img{
+        width: 100%;
+        display: flex;
+    }
+    .soupe_img>img{
+        display: flex;
+        width: 100%;
+    }
+    /* .Section_1>div{
+        display: block;
+    } */
+    .thai_section_1{
+        display: block;
+        margin-top: 115px;
+    }
+    /* .brunch>a{
+        float : right;
+        padding-right: 50px;
+    } */
+    .brunch>p{
+        padding-bottom: 40px;
+    }
+    .soupe_thai>a {
+        padding-left: 30px;
+    }
+    
+            /* SECTION 2 - PICTOS PREPARATION  */
+
+    .n1{
+        display: block;   
+    }
+    .n4{
+        justify-content: space-around;
+    }
+    /* .n1,
+    .n2, 
+    .n3, 
+    .n4 {
+        margin: auto;
+    } */
+    .n4>div>img {
+        margin-left: 2px;
+        margin-top: 5px;
+    }
+    .n4>p {
+        padding: 0px;
+        margin-top: 15px;
+    }
+    /* .n1{
+        justify-content: space-between;
+    } */
+    .thai_section_2{
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+    /* .n1{
+        float: right;
+    } */
+    .picto_toc{
+        margin-left: 20px;
+    }
+    .picto_marmite{
+        margin-left: 68px;
+    }
+
+            /* SECTION 3 - INGREDIENTS (2 personnes) - ET - MATERIEL */
+
+    .section_thai_3 {
+        display: flex;
+        padding: 0px 0px 0px;
+        flex-direction: column-reverse;
+    }
+    
+    /* .section_thai_3>div>ul>li{
+        font-size: 16px;
+    } */
+    
+            /* SECTION 4 - PREPARATION  */
+    
+    .thai_section_4 {
+        padding: 45px 20px 46px 16px;
+        margin-top: 50px;
+    }
+    .materiel{
+        margin-bottom: 30px;
+    }
+
+            /* SECTION 6 - EN PANNE D'INSPIRATION  */
+
+     /* SECTION 2 : VOS COUP DE COEUR */
+
+     /* .Section_2>h2{
+        margin-top: 0px;
+        padding: 100px 0px 50px;  
+    } */
+    .thai_section_6>h2 {
+        letter-spacing: 1px;
+        margin-top: 0px;
+        padding: 100px 0px 50px;
+        line-height: 32px;
+    }
+    .thai_section_6>div {
+        flex-wrap: wrap;
+    }
+    .thai_section_6>div>figure{
+        width: 100%;
+    }
+    .thai_section_6>div>figure:nth-child(2){
+        margin: 0;
+    }
+    .thai_section_6>div>figure>a>figcaption{
+        position: relative;
+        background-color: #BFA870;
+        font-size: 20px;
+        /* line-height: 24px; */
+        /* font-weight: 600; */
+        /* text-align: center; */
+        max-width: none;
+        /* padding-top: 30px; */
+        padding-bottom: 30px;
+        /* margin-top: 10px; */
+        margin-bottom: 20px;
+    }
+    .thai_section_6>div>figure>a{
+        text-decoration: none;
+    }
+    .Section_4{
+        background: none;
+        /* padding-top: 0px;
+        padding-bottom: 0px; */
+    }
+
+    .thai_section_6>p{
+        display: none;
+        }
+    /* .thai_section_6>div {
+        margin-top: 40px;
+    } */
+
+    .thai_section_6{
+        margin-bottom: 30px;
+    }
+    .footer{
+
+        border-top: 1px solid #BFA870;
+    }
+}
+
+                    
